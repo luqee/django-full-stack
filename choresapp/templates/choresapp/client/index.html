@@ -1,0 +1,9 @@
+{% if transaction_list %}
+    <ul>
+    {% for trans in transaction_list %}
+        <li><a href="{% url 'trans_detail' trans.id %">{{ trans.service_desc }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Transactions are available.</p>
+{% endif %}

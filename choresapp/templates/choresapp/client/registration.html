@@ -1,0 +1,14 @@
+<h1>Client reg form</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'cli_register' %}" method="post">
+{% csrf_token %}
+    <input type="text" name="u_name"  />
+    <label for="u_name">User Name: </label><br />
+    <input type="text" name="number" />
+    <label for="number">Phone No. : </label><br />
+    <input type="text" name="u_name" />
+    <label for="u_name">User Name: </label><br />
+<input type="submit" value="Register" />
+</form>
